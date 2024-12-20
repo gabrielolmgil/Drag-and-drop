@@ -1,0 +1,133 @@
+/* box model*/
+* { 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+  }
+  
+  /* rotation */
+  @keyframes rotate {
+      from {transform: rotate(0deg);}
+      to {transform: rotate(360deg);}
+  }
+  @-moz-keyframes rotate {
+      from {transform: rotate(0deg);}
+      to {transform: rotate(360deg);}
+  }
+  @-ms-keyframes rotate {
+      from {transform: rotate(0deg);}
+      to {transform: rotate(360deg);}
+  }
+  @keyframes rotate {
+      from {transform: rotate(0deg);}
+      to {transform: rotate(360deg);}
+  }
+  
+  
+  /* globals */
+  body {
+    background-image: url("../img/window-the-last-of-us-moewalls-com.mp4");
+    background-color: #000000;
+    color: #f7f7f7;
+  }
+  video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta el video para cubrir toda la pantalla */
+    z-index: -1; /* Envía el video al fondo */
+}
+  .wrapper {
+      position: relative;
+      margin-left: 13.2vw;
+      margin-top: 3vw;
+      height: 15vw;
+      width: 22vw;
+  }
+  .circle {
+      border-radius: 50%;
+  }
+  
+  /* player */
+  
+  
+  
+.buffering {
+      position: absolute;
+      right: 11vw;
+      width: 15vw;
+      height: 15vw;
+      border-right: 10px solid rgba(0, 0, 0, 0);
+      border-bottom: 10px solid rgba(8, 71, 24, 0.6);
+      border-left: 10px solid rgba(255, 255, 255, 0);
+      border-top: 10px solid rgba(8, 71, 24, 0.6);
+      animation: rotate 5s infinite linear;
+  }
+  
+#characters{
+    color: white;
+    border-radius: 0.5vw;
+    width: 35vw;
+    margin-top: 2vw;
+    margin-left: 5vw;
+}
+#characters img {
+    width: 8vw;
+    border-radius: 2vw;
+    transition: width 0.3s ease, border-radius 0.3s ease;
+}
+
+#characters img:hover {
+    width: 9.4vw;
+    border-radius: 1vw; /* Cambia también el borde para un efecto más visible */
+}
+
+.img_selector {
+    position: absolute;
+    width: 20vw;
+    height: 32vh;
+    margin-left: -6vw;
+}
+.img_selector img{
+    width: 8vw;
+    margin-top: 2vw;
+    margin-left: 5.6vw;
+    border-radius: 2vw;
+}
+#char-name{
+    font-size: 3.5vw;
+}
+#char-description{
+    font-size:1.2vw;
+}
+#char-info{
+    margin-right: 18vw;
+    background-color: #000000ab;
+    width: 30vw;
+    float: right;
+    margin-top: 3vw;
+    border-radius: 0.5vw;
+    text-align: center;
+    padding: 1vw;
+    display: none;
+}
+#picks{
+    float: left;
+    width: 35vw;
+}
+#char-info button{
+    border-radius: 0.3vw;
+    background-color: #00000070;
+    border-style: none;
+    color: white;
+    width: 8vw;
+    height: 6vh;
+    font-size: 1vw;
+    margin-bottom: 1vw;
+    margin-top: 1vw;
+}
+#char-info button:hover{
+    background-color: #000000a4;
+    cursor: pointer;
+}

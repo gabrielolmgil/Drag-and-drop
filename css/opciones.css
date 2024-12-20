@@ -1,0 +1,107 @@
+/* box model*/
+* { 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+  }
+  
+  /* rotation */
+  @keyframes rotate {
+      from {transform: rotate(0deg);}
+      to {transform: rotate(360deg);}
+  }
+  @-moz-keyframes rotate {
+      from {transform: rotate(0deg);}
+      to {transform: rotate(360deg);}
+  }
+  @-ms-keyframes rotate {
+      from {transform: rotate(0deg);}
+      to {transform: rotate(360deg);}
+  }
+  @keyframes rotate {
+      from {transform: rotate(0deg);}
+      to {transform: rotate(360deg);}
+  }
+  
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#opcion1 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 50%;
+    height: 100vh;
+    position: relative; /* Necesario para que los elementos hijos "absolute" se posicionen respecto a este contenedor */
+}
+
+#mid {
+    width: 12vw;
+    background-color: rgba(9, 48, 19, 0.582);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    border-radius: 1vw;
+    box-shadow: 5px 5px 5px rgba(6, 32, 13, 0.582);
+    z-index: 1;
+    position: absolute;
+}
+
+img {
+    width: 9vw;
+    border-radius: 1vw;
+}
+
+#opcion2 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 50%;
+    height: 100vh;
+    position: relative;
+}
+
+video {
+    position: absolute; /* Asegura que el video esté en el fondo dentro de su contenedor */
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    height: 100vh;
+    z-index: -1;
+}
+
+
+.wrapper {
+    position: relative;
+    margin-left: 13.2vw;
+    margin-top: 3vw;
+    height: 15vw;
+    width: 22vw;
+}
+.circle {
+    border-radius: 50%;
+}
+
+/* player */
+
+
+
+.buffering {
+    position: absolute;
+    right: 11vw;
+    width: 15vw;
+    height: 15vw;
+    border-right: 10px solid rgba(0, 0, 0, 0);
+    border-bottom: 10px solid rgba(8, 71, 24, 0.6);
+    border-left: 10px solid rgba(255, 255, 255, 0);
+    border-top: 10px solid rgba(8, 71, 24, 0.6);
+    animation: rotate 5s infinite linear;
+}
